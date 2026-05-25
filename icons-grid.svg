@@ -1,0 +1,41 @@
+<svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .i { fill: none; stroke: #FF6B00; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .f { fill: #FF6B00; }
+    .c { fill: #000; }
+    .w { fill: #FFF; }
+  </style>
+
+  <!-- Kettlebell -->
+  <g transform="translate(1, 1)">
+    <circle class="i" cx="12" cy="16" r="5"/>
+    <path class="i" d="M8 12c0-3.3 1.8-6 4-6s4 2.7 4 6"/>
+  </g>
+
+  <!-- Community -->
+  <g transform="translate(26, 1)">
+    <circle class="w" cx="12" cy="12" r="10"/>
+    <circle class="i" cx="5" cy="6" r="2"/>
+    <circle class="i" cx="12" cy="5.5" r="2"/>
+    <circle class="i" cx="19" cy="6" r="2"/>
+    <path class="i" d="M5 8v2"/>
+    <path class="i" d="M12 7.5v2"/>
+    <path class="i" d="M19 8v2"/>
+    <path class="i" d="M2.5 14c0-2.2 2.2-4 5-4h9c2.8 0 5 1.8 5 4"/>
+    <path class="i" d="M7.5 10l4.5 4 4.5-4"/>
+  </g>
+
+  <!-- Smile -->
+  <g transform="translate(1, 26)">
+    <circle class="i" cx="12" cy="12" r="10"/>
+    <path class="i" d="M7.5 14c0 0 1.5 3.5 4.5 3.5s4.5-3.5 4.5-3.5"/>
+    <circle class="f" cx="9" cy="10" r="1.6"/>
+    <circle class="f" cx="15" cy="10" r="1.6"/>
+  </g>
+
+  <!-- Lightning -->
+  <g transform="translate(26, 26)">
+    <circle class="f i" cx="12" cy="12" r="10"/>
+    <polygon class="c" points="12,3 5,13 11,13 10,21 19,11 11,11"/>
+  </g>
+</svg>

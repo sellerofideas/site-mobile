@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --orange: #F25900;
   --orange-hover: #d04e00;
@@ -507,19 +511,19 @@ header nav a.active {
 }
 
 /* ---------- PRODUCTS ---------- */
-.nossos-produtos {
+.our-products {
   padding: 60px 0;
   background: var(--black);
 }
 
-.nossos-produtos h2 {
+.our-products h2 {
   font-family: var(--font-display);
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
-.nossos-produtos h2::after {
+.our-products h2::after {
   content: '';
   display: block;
   width: 60px;
@@ -528,7 +532,7 @@ header nav a.active {
   margin: 0.75rem auto 0;
 }
 
-.produto-digital {
+.digital-product {
   background: linear-gradient(135deg, var(--black-soft) 0%, rgba(242, 89, 0, 0.08) 60%, rgba(242, 89, 0, 0.15) 100%);
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
@@ -541,7 +545,7 @@ header nav a.active {
   overflow: hidden;
 }
 
-.produto-digital::after {
+.digital-product::after {
   content: '';
   position: absolute;
   top: -50%;
@@ -573,13 +577,13 @@ header nav a.active {
   transform: scale(1.05) rotate(-1deg);
 }
 
-.produto-info {
+.product-info {
   text-align: center;
   z-index: 2;
   max-width: 100%;
 }
 
-.produto-info .info-label {
+.product-info .info-label {
   color: var(--orange);
   font-family: var(--font-heading);
   font-weight: 600;
@@ -589,14 +593,14 @@ header nav a.active {
   display: inline-block;
 }
 
-.produto-info h3 {
+.product-info h3 {
   font-family: var(--font-display);
   font-size: 2.2rem;
   color: var(--white);
   margin-bottom: 0.75rem;
 }
 
-.produto-info p {
+.product-info p {
   color: var(--gray);
   font-size: 0.8rem;
   line-height: 1.6;
@@ -727,7 +731,7 @@ header nav a.active {
   line-height: 1;
 }
 
-.grid-imagens {
+.grid-images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 12px;
@@ -741,7 +745,7 @@ header nav a.active {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.grid-item > picture img {
+.grid-item>picture img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -766,38 +770,57 @@ header nav a.active {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 16px;
+  padding: 0 16px 5px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 3px;
   z-index: 1;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,1.6) 40%, transparent 100%);
 }
 
 .icon-text .icon-svg {
-  width: 28px;
-  height: 28px;
+  width: 1.7rem;
+  color: #ff7a1a;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  opacity: .95;
+  shape-rendering: geometricPrecision;
+  vector-effect: non-scaling-stroke;
   flex-shrink: 0;
+}
+
+.kettlebell-icon{
+  width: 42px;
+  height: 42px;
+  color: #ff7a1a;
+  filter: drop-shadow(0 0 2px rgba(255,122,26,.15));
+  shape-rendering: geometricPrecision;
+  vector-effect: non-scaling-stroke;
+  opacity: .95;
 }
 
 .icon-text span:last-child {
   font-family: var(--font-heading);
   font-weight: 500;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 0.04em;
   color: var(--white);
   line-height: 1.2;
 }
 
 /* ---------- CTA ---------- */
-.faca-parte {
+.join-us {
   position: relative;
   background: linear-gradient(135deg, #d94b00 0%, var(--orange) 40%, #ff8030 100%);
   padding: 64px 0;
   overflow: hidden;
 }
 
-.faca-parte-flex {
+.join-us-flex {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -806,15 +829,15 @@ header nav a.active {
   z-index: 2;
 }
 
-.faca-parte .container.faca-parte-flex {
+.join-us .container.join-us-flex {
   display: flex;
 }
 
-.faca-parte-content {
+.join-us-content {
   max-width: 500px;
 }
 
-.faca-parte-content h3 {
+.join-us-content h3 {
   font-family: var(--font-display);
   font-size: 1.8rem;
   color: var(--white);
@@ -822,13 +845,13 @@ header nav a.active {
   transform: none;
 }
 
-.faca-parte-content p {
+.join-us-content p {
   color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
-.bg-mascote {
+.bg-mascot {
   position: absolute;
   right: -40px;
   bottom: 40px;
@@ -841,7 +864,7 @@ header nav a.active {
 /* ---------- FOOTER ---------- */
 footer {
   background: var(--black);
-  padding: 60px 0 0;
+  padding: 60px 0 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -951,6 +974,10 @@ footer .container.footer-grid {
    =========================================== */
 @media (min-width: 768px) {
 
+  .container {
+    max-width: 700px;
+  }
+
   .hamburger {
     display: none;
   }
@@ -977,14 +1004,25 @@ footer .container.footer-grid {
     font-size: 0.85rem;
   }
 
+  .hero {
+    display: block;
+  }
+
   .hero h1 {
     font-size: clamp(4rem, 12vw, 7rem);
+    width: 110%;
   }
 
   .hero-flex {
     flex-direction: row;
+    align-items: flex-start;
     text-align: left;
     gap: 20px;
+  }
+
+  .hero-content {
+    flex: 0 1 auto;
+    align-self: flex-start;
   }
 
   .hero p {
@@ -1032,17 +1070,17 @@ footer .container.footer-grid {
     font-size: 4rem;
   }
 
-  .produto-digital {
+  .digital-product {
     flex-direction: row;
     text-align: left;
     padding: 40px 36px;
   }
 
-  .produto-info {
+  .product-info {
     text-align: left;
   }
 
-  .produto-info p {
+  .product-info p {
     margin-left: 0;
     margin-right: 0;
   }
@@ -1056,21 +1094,21 @@ footer .container.footer-grid {
     justify-content: flex-start;
   }
 
-  .grid-imagens {
+  .grid-images {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .faca-parte-flex {
+  .join-us-flex {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 
-  .faca-parte .container.faca-parte-flex {
+  .join-us .container.join-us-flex {
     display: flex;
   }
 
-  .bg-mascote {
+  .bg-mascot {
     opacity: 0.08;
   }
 
@@ -1122,7 +1160,7 @@ footer .container.footer-grid {
     font-size: 5rem;
   }
 
-  .produto-digital {
+  .digital-product {
     padding: 48px 48px;
     gap: 48px;
   }
@@ -1131,14 +1169,43 @@ footer .container.footer-grid {
     max-width: 260px;
   }
 
-  .produto-info h3 {
+  .product-info h3 {
     font-size: 2.8rem;
   }
 
-  .faca-parte-content h3 {
+  .join-us-content h3 {
     font-size: 2.2rem;
   }
 
+}
+
+/* ---------- BACK TO TOP ---------- */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: var(--orange);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  box-shadow: 0 4px 14px rgba(242, 89, 0, 0.35);
+  transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+}
+
+.back-to-top:hover {
+  background: var(--orange-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(242, 89, 0, 0.5);
+}
+
+.back-to-top svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* ---------- ANIMATIONS ---------- */

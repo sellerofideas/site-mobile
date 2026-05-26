@@ -380,6 +380,11 @@ header nav a.active {
   border-bottom: 4px solid var(--orange);
 }
 
+#brand .container.hero-flex {
+  position: relative;
+  z-index: 2;
+}
+
 .brand-bg {
   position: absolute;
   inset: 0;
@@ -411,6 +416,7 @@ header nav a.active {
 .grid-brand {
   display: flex;
   flex-direction: column;
+  padding: 0;
   gap: 40px;
   position: relative;
   z-index: 2;
@@ -447,6 +453,7 @@ header nav a.active {
   padding: 12px 14px;
   max-width: none;
   text-align: left;
+  justify-content: center;
 }
 
 .feature-item img {
@@ -494,6 +501,7 @@ header nav a.active {
 .our-products {
   padding: 60px 0;
   background: var(--black);
+  overflow-x: hidden;
 }
 
 .our-products h2 {
@@ -517,12 +525,18 @@ header nav a.active {
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 16px;
   padding: 32px 24px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
   position: relative;
-  overflow: hidden;
+}
+
+.app-mockup {
+  min-width: 320px;
+  z-index: 2;
+  margin-top: -90px;
 }
 
 .digital-product::after {
@@ -538,17 +552,12 @@ header nav a.active {
   pointer-events: none;
 }
 
-.app-mockup {
-  max-width: 220px;
-  z-index: 2;
-}
-
 .app-mockup img {
   width: 100%;
   left: auto;
   top: auto;
   display: block;
-  position: static;
+  position: relative;
   border-radius: 20px;
   filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.6));
 }
@@ -560,7 +569,7 @@ header nav a.active {
 .product-info {
   text-align: center;
   z-index: 2;
-  max-width: 100%;
+  max-width: 300px;
 }
 
 .product-info .info-label {
@@ -627,13 +636,12 @@ header nav a.active {
 
 .app-buttons {
   display: flex;
+  width: stretch;
   gap: 12px;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .app-buttons img {
-  height: 44px;
   border-radius: 6px;
   transition: transform 0.25s;
 }
@@ -968,10 +976,6 @@ footer .container.footer-grid {
    =========================================== */
 @media (min-width: 768px) {
 
-  .container {
-    max-width: 700px;
-  }
-
   .hamburger {
     display: none;
   }
@@ -1043,11 +1047,6 @@ footer .container.footer-grid {
     background-position: 70% 30%;
   }
 
-  #brand .container {
-    margin-left: 40px;
-    max-width: 50%;
-  }
-
   .brand {
     max-height: 600px;
     padding: 40px 0;
@@ -1059,11 +1058,15 @@ footer .container.footer-grid {
     -webkit-backdrop-filter: none;
   }
 
-  .brand-text {
+  .grid-brand {
+    max-width: 50%;
+    margin: 0;
+
     gap: 0;
+    z-index: 2;
   }
 
-  .grid-brand {
+  .brand-text {
     gap: 0;
   }
 
@@ -1107,26 +1110,75 @@ footer .container.footer-grid {
 
   .digital-product {
     flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
     text-align: left;
-    padding: 40px 36px;
+    max-height: 316px;
+    padding: 15px;
+    gap: 0;
+  }
+
+  .app-mockup {
+    max-width: max-content;
+    width: 35%;
+    margin-top: -120px;
+  }
+
+  .app-mockup img {
+    min-width: 114%;
+    left: -30px;
   }
 
   .product-info {
     text-align: left;
   }
 
+  .product-info .info-label {
+    margin: 0 0 0.3rem;
+    font-size: 0.75rem;
+  }
+
+  .product-info h3 {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+  }
+
   .product-info p {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 0.3rem;
+    font-size: 0.7rem;
   }
 
   .check-list {
     margin-left: 0;
     margin-right: 0;
+    margin-bottom: 10px;
+    gap: 3px;
+  }
+
+  .check-list li {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
   }
 
   .app-buttons {
     justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .app-buttons img {
+    max-width: 100px;
+  }
+
+  .app-buttons {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .app-buttons img {
+    width: 100px;
+    height: 30px;
   }
 
   .grid-images {
@@ -1193,17 +1245,16 @@ footer .container.footer-grid {
     font-size: 5rem;
   }
 
-  .digital-product {
-    padding: 48px 48px;
-    gap: 48px;
+  .app-mockup {
+    max-width: 200px;
   }
 
-  .app-mockup {
-    max-width: 260px;
+  .product-info {
+    margin-top: 24px;
   }
 
   .product-info h3 {
-    font-size: 2.8rem;
+    font-size: 2.2rem;
   }
 
   .join-us-content h3 {

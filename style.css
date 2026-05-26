@@ -673,7 +673,8 @@ header nav a.active {
 
 .brand-col-1 h2,
 .our-products h2,
-.lifestyle h2 {
+.lifestyle h2,
+.product-info h3 {
   color: transparent;
   background:
     url("data:image/svg+xml,%3Csvg viewBox='0 0 200 50' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='50' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E") repeat,

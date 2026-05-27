@@ -17,7 +17,7 @@
 
   <header>
     <div class="container header-inner">
-      <a href="#" class="logo" aria-label="MeuZovo">
+      <a href="index.html" class="logo" aria-label="MeuZovo">
         <picture>
           <source media="(min-width: 1024px)" srcset="image/logo-large.png">
           <source media="(min-width: 768px)" srcset="image/logo-med.png">
@@ -60,7 +60,7 @@
     <section id="brand" class="brand primary-color">
       <div class="brand-bg"></div>
       <div class="container hero-flex">
-        <div class="container grid-brand">
+        <div class="container grid-brand reveal">
           <div class="brand-text">
             <div class="brand-col-1">
               <span class="section-title-small">A MARCA</span>
@@ -108,8 +108,8 @@
 
     <section id="our-products" class="our-products">
       <div class="container">
-        <h2>NOSSOS PRODUTOS</h2>
-        <div class="digital-product">
+        <h2 class="reveal">NOSSOS PRODUTOS</h2>
+        <div class="digital-product reveal reveal-delay-1">
           <div class="app-mockup">
             <picture>
               <source media="(min-width: 1024px)" srcset="image/mokup-large.png">
@@ -149,7 +149,7 @@
 
     <section class="lifestyle">
       <div class="container lifestyle-flex">
-        <div class="content-text">
+        <div class="content-text reveal">
           <h2>MAIS QUE UMA MARCA,<br><span>UM ESTILO DE VIDA.</span></h2>
           <p class="title-small">A MeuZovo é pra quem treina pesado, sofre no WOD e ainda sai rindo no final.</p>
           <div class="slogan-block">
@@ -158,7 +158,7 @@
             <p class="highlight">MEUZOVO!</p>
           </div>
         </div>
-        <div class="grid-images">
+        <div class="grid-images reveal reveal-delay-2">
           <div class="grid-item">
             <picture>
               <source media="(min-width: 1024px)" srcset="image/card-work-large.png">
@@ -253,7 +253,7 @@
       </div>
     </section>
 
-    <section id="join-us" class="join-us">
+    <section id="join-us" class="join-us reveal">
       <div class="container join-us-flex">
         <div class="join-us-content">
           <h3>FAÇA PARTE DO MOVIMENTO</h3>
@@ -266,7 +266,7 @@
     </section>
   </main>
 
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer reveal">
     <div class="container footer-grid">
       <div class="footer-logo-info">
         <picture>
@@ -325,6 +325,7 @@
       <path d="M5 11l7-7 7 7" />
     </svg>
   </a>
+  <script src="script.js"></script>
 </body>
 
 </html>

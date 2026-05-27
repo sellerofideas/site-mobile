@@ -288,7 +288,7 @@ header nav a.active {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.65);
+  background: rgba(0, 0, 0, 0.1);
   pointer-events: none;
 }
 
@@ -772,7 +772,7 @@ header nav a.active {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 0 16px 5px;
+  padding: 0 16px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1241,7 +1241,22 @@ footer .container.footer-grid {
       linear-gradient(90deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.05) 100%),
       url('image/bg-hero-large.png');
     background-size: cover;
-    background-position: 70% 40%;
+    background-position: 70% 25%;
+    top: -30px;
+  }
+
+  .hero-bg::after {
+    display: none;
+  }
+
+  .hero {
+    overflow: visible;
+  }
+
+  header {
+    background: linear-gradient(to bottom, var(--black) 0%, var(--black) 50%, transparent 100%);
+    position: relative;
+    z-index: 2;
   }
 
   .hero-image img {

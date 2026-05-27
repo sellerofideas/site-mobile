@@ -51,7 +51,7 @@ ul {
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -149,7 +149,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1120px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 12px var(--gutter);
 }
@@ -499,7 +499,7 @@ header nav a.active {
 
 /* ---------- PRODUCTS ---------- */
 .our-products {
-  padding: 60px 0;
+  padding: 30px 0;
   background: var(--black);
   overflow-x: hidden;
 }
@@ -652,8 +652,8 @@ header nav a.active {
 
 /* ---------- LIFESTYLE ---------- */
 .lifestyle {
-  padding: 60px 0;
-  background: var(--black-soft);
+  padding: 0 0 30px 0;
+  background: var(--black);
 }
 
 .lifestyle-flex {
@@ -878,7 +878,7 @@ footer {
 }
 
 footer .container.footer-grid {
-  max-width: 1120px;
+  max-width: 920px;
 }
 
 .footer-logo-info img {
@@ -1183,6 +1183,11 @@ footer .container.footer-grid {
 
   .grid-images {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .lifestyle-flex {
+    flex-direction: row;
+    gap: 20px;
   }
 
   .join-us-flex {

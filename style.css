@@ -194,6 +194,12 @@ header .logo img {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.menu-toggle:checked+.hamburger {
+  position: fixed;
+  top: 12px;
+  right: 20px;
+}
+
 .menu-overlay {
   position: fixed;
   inset: 0;

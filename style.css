@@ -117,7 +117,7 @@ h4 {
 .btn-black {
   background: var(--black);
   color: var(--white);
-  padding: 14px 28px;
+  padding: 5px 28px;
   border-radius: 6px;
   font-family: var(--font-heading);
   font-weight: 600;
@@ -818,7 +818,7 @@ header nav a.active {
 .join-us {
   position: relative;
   background: linear-gradient(135deg, #d94b00 0%, var(--orange) 40%, #ff8030 100%);
-  padding: 64px 0;
+  padding: 15px 0;
   overflow: hidden;
 }
 
@@ -841,6 +841,7 @@ header nav a.active {
 
 .join-us-content h3 {
   font-family: var(--font-display);
+  max-width: 200px;
   font-size: 1.8rem;
   color: var(--white);
   margin-bottom: 10px;
@@ -855,10 +856,10 @@ header nav a.active {
 
 .bg-mascot {
   position: absolute;
-  right: -40px;
-  bottom: 40px;
+  right: 0px;
+  top: 10px;
   max-height: 260px;
-  opacity: 0.12;
+  opacity: 0.2;
   pointer-events: none;
   z-index: 1;
 }
@@ -1197,7 +1198,10 @@ footer .container.footer-grid {
   .join-us-flex {
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+  }
+
+  .join-us-content h3 {
+    max-width: max-content;
   }
 
   .join-us .container.join-us-flex {
@@ -1205,7 +1209,11 @@ footer .container.footer-grid {
   }
 
   .bg-mascot {
-    opacity: 0.08;
+    opacity: 0.3;
+    top: 20px;
+    right: 20px;
+    width: 300px;
+    min-height: 500px;
   }
 
   .footer-grid {

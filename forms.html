@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; font-src https://fonts.gstatic.com; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://docs.google.com https://script.google.com https://*.script.google.com;">
+  <title>Parceria Industrial - MeuZovo</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="forms.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="MeuZovo">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="image/logo-large.png">
+          <source media="(min-width: 768px)" srcset="image/logo-med.png">
+          <img src="image/logo-small.png" alt="MeuZovo">
+        </picture>
+      </a>
+
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-hidden="true">
+      <label for="menu-toggle" class="hamburger" aria-label="Abrir menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <div class="menu-overlay"></div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">INÍCIO</a></li>
+          <li><a href="index.html#our-products">PRODUTOS</a></li>
+          <li><a href="index.html#brand">A MARCA</a></li>
+          <li><a href="index.html#join-us">CONTATO</a></li>
+        </ul>
+        <a href="https://play.google.com/store/apps/details?id=com.meuzovo.donaluiza" class="btn-primary">BAIXAR APP</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="forms-hero">
+      <div class="container">
+        <h1>PARCEIRO INDUSTRIAL</h1>
+        <p>Formulário para indústrias de suplementação interessadas em parceria com a MeuZovo.</p>
+      </div>
+    </section>
+
+    <section class="forms-section">
+      <div class="container">
+        <div class="form-card" id="formCard">
+          <form id="partnerForm" novalidate>
+
+            <div class="form-section-title">DADOS DA EMPRESA</div>
+
+            <div class="form-group">
+              <label for="companyName">Nome da empresa <span class="required">*</span></label>
+              <input type="text" id="companyName" name="companyName" class="form-control" placeholder="Razão social ou nome fantasia" required>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="moq">MOQ estimado <span class="required">*</span></label>
+                <input type="text" id="moq" name="moq" class="form-control" placeholder="Ex: 100 unidades por SKU" required>
+              </div>
+
+              <div class="form-group">
+                <label for="leadTime">Prazo médio de produção <span class="required">*</span></label>
+                <input type="text" id="leadTime" name="leadTime" class="form-control" placeholder="Ex: 30 dias úteis" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="investment">Investimento minimo <span class="required">*</span></label>
+              <input type="text" id="investment" name="investment" class="form-control" placeholder="Ex: R$ 0.000" required>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-title">PRODUTOS</div>
+
+            <div class="form-group">
+              <label>Produtos oferecidos <span class="required">*</span></label>
+              <span class="label-hint">Selecione todos os que se aplicam</span>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="products" value="Whey Protein">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Whey Protein</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="products" value="Creatina">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Creatina</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="products" value="Barras de Proteína">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Barras de Proteína</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="products" value="Outros">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Outros</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="otherProducts">Se selecionou "Outros", especifique:</label>
+              <input type="text" id="otherProducts" name="otherProducts" class="form-control" placeholder="Quais outros produtos você fabrica?">
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-title">CONTATO &amp; LOGÍSTICA</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="website">Site oficial</label>
+                <input type="url" id="website" name="website" class="form-control" placeholder="https://www.exemplo.com">
+              </div>
+
+              <div class="form-group">
+                <label for="factoryAddress">Endereço da fábrica <span class="required">*</span></label>
+                <input type="text" id="factoryAddress" name="factoryAddress" class="form-control" placeholder="Rua, número, bairro, cidade - UF" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Número para contato <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" class="form-control" placeholder="(11) 99999-9999" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email">E-mail para contato <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="contato@exemplo.com" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Possui logística integrada "full-service / on-demand"? <span class="required">*</span></label>
+              <div class="radio-group">
+                <label class="radio-item">
+                  <input type="radio" name="logistics" value="Sim" required>
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Sim</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="logistics" value="Nao">
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Não</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="logistics" value="Podemos implementar">
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Podemos implementar</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-title">QUALIDADE &amp; SERVIÇOS</div>
+
+            <div class="form-group">
+              <label>Os produtos podem ser experimentados na fábrica ou enviados para teste de qualidade antes do fechamento? <span class="required">*</span></label>
+              <div class="radio-group">
+                <label class="radio-item">
+                  <input type="radio" name="productTesting" value="Sim" required>
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Sim</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="productTesting" value="Nao">
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Não</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Possui serviço de criação de rótulo? <span class="required">*</span></label>
+              <div class="radio-group">
+                <label class="radio-item">
+                  <input type="radio" name="labelService" value="Desenvolvemos" required>
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Desenvolvemos</span>
+                </label>
+                <label class="radio-item">
+                  <input type="radio" name="labelService" value="Recebemos pronto">
+                  <span class="radio-circle"></span>
+                  <span class="item-label">Recebemos pronto</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Documentação disponível</label>
+              <span class="label-hint">Selecione todos os que possui, esses documentos podem ser solicitados a qualquer momento durante o processo de avaliação.</span>
+              <div class="checkbox-group">
+                <label class="checkbox-item">
+                  <input type="checkbox" name="docs" value="Registro na Anvisa">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Registro na Anvisa</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="docs" value="Teste de estabilidade">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Teste de estabilidade</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="docs" value="Laudo dos produtos">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Laudo dos produtos</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="docs" value="Certificado de boas práticas">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Certificado de boas práticas</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="docs" value="Certificado de responsabilidade técnica">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Certificado de responsabilidade técnica</span>
+                </label>
+                <label class="checkbox-item">
+                  <input type="checkbox" name="docs" value="Outros">
+                  <span class="checkbox-box"></span>
+                  <span class="item-label">Outros</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="otherDocs">Se selecionou "Outros" em documentação, especifique:</label>
+              <input type="text" id="otherDocs" name="otherDocs" class="form-control" placeholder="Quais outros documentos?">
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-title">PORTFÓLIO</div>
+
+            <div class="form-group">
+              <label for="brandsServed">Quais marcas já atendeu?</label>
+              <textarea id="brandsServed" name="brandsServed" class="form-control" placeholder="Liste as marcas que já produziu ou atendeu como fornecedor..."></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="catalog">Insira o catálogo atualizado</label>
+                <span class="label-hint">PDF ou imagens do portfólio de produtos</span>
+                <div class="file-upload-wrapper">
+                  <label class="file-upload-label" for="catalog">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="12" y1="18" x2="12" y2="12"/>
+                      <line x1="9" y1="15" x2="15" y2="15"/>
+                    </svg>
+                    <span>Clique para selecionar o arquivo</span>
+                  </label>
+                  <input type="file" id="catalog" name="catalog" class="file-upload-input" accept=".pdf,.jpg,.jpeg,.png">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="budget">Insira o orçamento <span style="color:var(--gray-dark);font-weight:400;">(opcional)</span></label>
+                <span class="label-hint">Tabela de preços ou proposta comercial</span>
+                <div class="file-upload-wrapper">
+                  <label class="file-upload-label" for="budget">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                      <polyline points="14 2 14 8 20 8"/>
+                      <line x1="12" y1="18" x2="12" y2="12"/>
+                      <line x1="9" y1="15" x2="15" y2="15"/>
+                    </svg>
+                    <span>Clique para selecionar o arquivo</span>
+                  </label>
+                  <input type="file" id="budget" name="budget" class="file-upload-input" accept=".pdf,.xls,.xlsx,.csv">
+                </div>
+              </div>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <div class="form-section-title">DIFERENCIAL</div>
+
+            <div class="form-group">
+              <label for="differential">Qual o diferencial da sua empresa para esta parceria?</label>
+              <span class="label-hint">Descreva o que torna sua empresa única:</span>
+              <textarea id="differential" name="differential" class="form-control" placeholder="Diga-nos o que nos faria a Meuzovo fechar com você na hora..." ></textarea>
+            </div>
+
+            <div class="form-submit">
+              <button type="submit" class="btn-orange">ENVIAR FORMULÁRIO</button>
+            </div>
+
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"/>
+              </svg>
+            </div>
+            <h2>FORMULÁRIO ENVIADO!</h2>
+            <p>Recebemos suas informações. Nossa equipe entrará em contato em breve.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="footer reveal">
+    <div class="container footer-grid">
+      <div class="footer-logo-info">
+        <picture>
+          <source media="(min-width: 1024px)" srcset="image/logo-large.png">
+          <source media="(min-width: 768px)" srcset="image/logo-med.png">
+          <img src="image/logo-small.png" alt="MeuZovo">
+        </picture>
+        <p>Humor, treino pesado e atitude.</p>
+      </div>
+      <div class="footer-links">
+        <h4>NAVEGAÇÃO</h4>
+        <ul>
+          <li><a href="index.html#hero">Início</a></li>
+          <li><a href="index.html#our-products">Produtos</a></li>
+          <li><a href="index.html#brand">A Marca</a></li>
+          <li><a href="index.html#join-us">Contato</a></li>
+          <li><a href="privacy-policy.html">Politicas</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h4>SIGA A GENTE</h4>
+        <div class="social-icons">
+          <a href="https://www.instagram.com/meuzovo.app" class="social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#F25900" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="5" />
+              <circle cx="17" cy="7" r="1.5" fill="#F25900" />
+            </svg>
+          </a>
+          <a href="#" class="social-link" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#F25900" stroke-width="2">
+              <path d="M9 12a4 4 0 1 0 4 4V4h3a4 4 0 0 0 4 4" />
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/meuzovo" class="social-link" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#F25900" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 MeuZovo<span class="reg">&reg;</span>. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+      stroke-linejoin="round">
+      <path d="M12 20V4" />
+      <path d="M5 11l7-7 7 7" />
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+  <script>
+    (function () {
+      // ===================================================================
+      // CONFIGURACAO
+      // ===================================================================
+      // ESCOLHA UM METODO:
+      //
+      // METODO A — Google Apps Script (recomendado)
+      //   Acesse https://script.google.com, cole forms-apps-script.gs,
+      //   Implantar > Web App, copie a URL gerada e cole abaixo:
+      //
+      var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxM48DFlFvtzCSfLAO2fojbPx70Fyva8O4b76nNr0OsGiJJ3HQk9vz5WF1Z_NkndjRc/exec';
+      //
+      // METODO B — Google Forms (alternativa)
+      //   Crie um Forms, veja o codigo-fonte, ache action="..." e cole:
+      //
+      var GOOGLE_FORM_ACTION = '';
+      var FIELD_MAP = {
+        companyName: '', moq: '', leadTime: '', investment: '',
+        website: '', factoryAddress: '', phone: '', email: '',
+        products: '', otherProducts: '', logistics: '',
+        productTesting: '', labelService: '', docs: '',
+        otherDocs: '', brandsServed: '', catalog: '', budget: ''
+      };
+      // ===================================================================
+
+      var form = document.getElementById('partnerForm');
+      var success = document.getElementById('formSuccess');
+      var formCard = document.getElementById('formCard');
+      var submitBtn = form.querySelector('.btn-orange');
+
+      function sanitize(str) {
+        if (typeof str !== 'string') return '';
+        return str.replace(/<[^>]*>/g, '').trim();
+      }
+
+      function isValidEmail(str) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
+      }
+
+      document.querySelectorAll('.file-upload-input').forEach(function (input) {
+        input.addEventListener('change', function () {
+          var label = this.parentElement.querySelector('.file-upload-label span');
+          if (this.files && this.files[0]) {
+            label.textContent = this.files[0].name + ' (' + (this.files[0].size / 1024).toFixed(1) + ' KB)';
+            label.classList.add('file-name');
+          } else {
+            label.textContent = this.getAttribute('id') === 'catalog'
+              ? 'Clique para selecionar o arquivo'
+              : 'Clique para selecionar o arquivo';
+            label.classList.remove('file-name');
+          }
+        });
+      });
+
+      function setLoading(loading) {
+        submitBtn.disabled = loading;
+        submitBtn.textContent = loading ? 'ENVIANDO...' : 'ENVIAR FORMULÁRIO';
+        submitBtn.style.opacity = loading ? '0.7' : '1';
+        submitBtn.style.cursor = loading ? 'not-allowed' : 'pointer';
+      }
+
+      function collectData() {
+        var data = {};
+        var fd = new FormData(form);
+
+        fd.forEach(function (value, key) {
+          if (key === 'products' || key === 'docs') {
+            if (!data[key]) data[key] = [];
+            data[key].push(value);
+          } else {
+            data[key] = value;
+          }
+        });
+
+        var radios = form.querySelectorAll('input[type="radio"]');
+        var radioNames = {};
+        radios.forEach(function (r) { radioNames[r.name] = true; });
+        Object.keys(radioNames).forEach(function (name) {
+          var checked = form.querySelector('input[name="' + name + '"]:checked');
+          data[name] = checked ? checked.value : '';
+        });
+
+        Object.keys(data).forEach(function (key) {
+          if (typeof data[key] === 'string') {
+            data[key] = sanitize(data[key]);
+          } else if (Array.isArray(data[key])) {
+            data[key] = data[key].map(function (v) { return sanitize(v); });
+          }
+        });
+
+        data.catalog = document.getElementById('catalog').files.length > 0
+          ? document.getElementById('catalog').files[0].name : '';
+        data.budget = document.getElementById('budget').files.length > 0
+          ? document.getElementById('budget').files[0].name : '';
+
+        return data;
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        var requiredFields = form.querySelectorAll('[required]');
+        var valid = true;
+
+        requiredFields.forEach(function (field) {
+          if (field.type === 'radio') {
+            var name = field.name;
+            var checked = form.querySelector('input[name="' + name + '"]:checked');
+            if (!checked) {
+              valid = false;
+              var group = field.closest('.radio-group');
+              if (group) {
+                group.style.border = '1px solid rgba(242,89,0,0.4)';
+                group.style.borderRadius = '8px';
+                group.style.padding = '8px';
+              }
+            } else {
+              var group = field.closest('.radio-group');
+              if (group) {
+                group.style.border = 'none';
+                group.style.padding = '0';
+              }
+            }
+          } else if (!field.value.trim()) {
+            valid = false;
+            field.style.borderColor = '#F25900';
+            field.style.boxShadow = '0 0 0 3px rgba(242,89,0,0.15)';
+          } else {
+            field.style.borderColor = '';
+            field.style.boxShadow = '';
+          }
+        });
+
+        if (!valid) {
+          var firstInvalid = form.querySelector('[required]:invalid, .radio-group[style*="border"]');
+          if (firstInvalid) firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        var data = collectData();
+
+        if (data.email && !isValidEmail(data.email)) {
+          var emailField = document.getElementById('email');
+          emailField.style.borderColor = '#F25900';
+          emailField.style.boxShadow = '0 0 0 3px rgba(242,89,0,0.15)';
+          emailField.focus();
+          return;
+        }
+
+        setLoading(true);
+
+        var hasAppsScript = !!APPS_SCRIPT_URL;
+        var hasGoogleForm = GOOGLE_FORM_ACTION &&
+          Object.values(FIELD_MAP).some(function (v) { return v; });
+
+        // Se nenhum configurado, simulacao
+        if (!hasAppsScript && !hasGoogleForm) {
+          console.log('[SIMULACAO] Dados:', data);
+          setTimeout(function () {
+            setLoading(false);
+            form.style.display = 'none';
+            success.classList.add('show');
+            formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 800);
+          return;
+        }
+
+        // ---- METODO A: Google Apps Script ----
+        if (hasAppsScript) {
+          var body = JSON.stringify(data);
+          fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain; charset=UTF-8' },
+            body: body
+          }).then(function () {
+            setLoading(false);
+            form.style.display = 'none';
+            success.classList.add('show');
+            formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }).catch(function () {
+            setLoading(false);
+            alert('Erro de rede. Verifique sua conexao e tente novamente.');
+          });
+          return;
+        }
+
+        // ---- METODO B: Google Forms ----
+        if (hasGoogleForm) {
+          var params = new URLSearchParams();
+
+          var singleMap = {
+            companyName: 'companyName', moq: 'moq', leadTime: 'leadTime',
+            investment: 'investment', website: 'website',
+            factoryAddress: 'factoryAddress', phone: 'phone', email: 'email',
+            otherProducts: 'otherProducts', logistics: 'logistics',
+            productTesting: 'productTesting', labelService: 'labelService',
+            otherDocs: 'otherDocs', brandsServed: 'brandsServed',
+            catalog: 'catalog', budget: 'budget'
+          };
+
+          Object.keys(singleMap).forEach(function (key) {
+            var entryId = FIELD_MAP[key];
+            if (entryId && data[key]) {
+              params.append(entryId, data[key]);
+            }
+          });
+
+          ['products', 'docs'].forEach(function (key) {
+            var entryId = FIELD_MAP[key];
+            if (entryId && Array.isArray(data[key])) {
+              data[key].forEach(function (item) {
+                params.append(entryId, item);
+              });
+            }
+          });
+
+          fetch(GOOGLE_FORM_ACTION, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+            body: params.toString()
+          }).then(function () {
+            setLoading(false);
+            form.style.display = 'none';
+            success.classList.add('show');
+            formCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }).catch(function () {
+            setLoading(false);
+            alert('Erro de rede. Verifique sua conexao e tente novamente.');
+          });
+        }
+      });
+    })();
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.meuzovo.donaluiza",
+      "sha256_cert_fingerprints": [
+        "E0:7A:79:0E:B7:B4:B1:CF:9B:43:B8:C1:5E:47:7F:AE:69:F7:8D:29:0A:89:BE:7E:9A:90:E6:DA:C4:E7:B7:08",
+        "24:EC:56:AC:87:B1:5A:F5:56:2F:FD:4C:48:D0:78:46:47:A6:AC:62:26:FA:54:5A:75:57:37:AF:35:9D:DD:DF"
+      ]
+    }
+  }
+]

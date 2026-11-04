@@ -1,0 +1,33 @@
+# Documentacao operacional local
+DOCUMENTACAO_PROJETO.md
+
+# Variaveis, credenciais e configuracoes por ambiente
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+service-account*.json
+firebase-adminsdk-*.json
+credentials*.json
+secrets.*
+
+# Configuracoes locais da integracao de formularios
+forms-apps-script.local.gs
+forms-config.local.js
+
+# Dados enviados por parceiros e exportacoes operacionais
+uploads/
+submissions/
+exports/
+*.csv
+*.xlsx
+
+# Arquivos de ferramentas e sistema operacional
+node_modules/
+.DS_Store
+Thumbs.db
